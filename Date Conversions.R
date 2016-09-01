@@ -1,6 +1,9 @@
 library('RColorBrewer')
+library(wordcloud)
+library(plyr)
 options(stringsasfactors=F)
 setwd("/Users/christopherlee/Documents/CAL/Facebook-Statuses")
+Sys.setlocale(category = "LC_ALL", locale = "zh_CN.UTF-8")
 F1<-read.csv("Facebook Statuses.csv", TRUE, sep=",",dec=".", na.strings="NA", stringsAsFactors=FALSE, encoding="UTF-8")
 F1<-F1[-nrow(F1),]
 d1<-F1[,2]
